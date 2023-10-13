@@ -27,18 +27,16 @@ function impresoFX() {
 //Parar el reloj a los 5 segundos.
 //Cerrarla tras 10 segundos.
 
-var $nuevaVentana;
-var $tempo1 = window.setInterval(tiempo, 1000);
 //var $tempo2 = window.setInterval(, 10000);
 
 function abrirVentana() {
-  $nuevaVentana = window.open(
+  var $nuevaVentana = window.open(
     "",
     "ventana",
     "toolbar=no,location=no,menubar=no,width=200,height=80,resizable= yes,scrollbars= yes,top= 300,left = 300"
   );
 
-  tiempo();
+  var $tempo1 = window.setInterval(tiempo, 1000);
 }
 
 function tiempo() {
@@ -46,6 +44,7 @@ function tiempo() {
   let $horas = $fecha.getHours();
   let $minutos = $fecha.getMinutes();
   let $segundos = $fecha.getSeconds();
+
   $nuevaVentana.document.write(
     "<p>" + $horas + "/" + $minutos + "/" + $segundos + "</p>"
   );
@@ -54,7 +53,7 @@ function tiempo() {
 }
 
 function cerrarVentana() {
-  $nuevaVentana.window.close();
+  $nuevaVentana.close();
 }
 
 function detenerReloj() {
