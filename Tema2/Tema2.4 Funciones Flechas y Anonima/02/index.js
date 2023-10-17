@@ -8,8 +8,8 @@ var num = prompt("Escribe un numero mayor o igual a cero");
      
       for (i = 0; i < num; i++) {
       total = total * i;}
-      return total;
     }
+    return total;
 };
 
 document.write(factorial(num));
