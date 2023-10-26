@@ -1,8 +1,16 @@
-.foto {
+.foto1 {
   width: 20px;
   height: 20px;
-  margin: 20px;
-  margin: auto;
+  position: relative;
+  /*margin: 20px;
+  margin: auto;*/
+}
+.foto2 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  /*margin: 20px;
+  margin: auto;*/
 }
 .contenedor {
   height: 49%;

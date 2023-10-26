@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script type="text/javascript" src="index.js"></script>
+    
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="contenedor">
-      <p><img class="foto" src="img/contento.png" id="foto1"/></p>
+    <div >
+      <p><img class="foto1" src="img/contento.png" id="foto1"/></p>
       <br>
       <br>
-      <p><img class="foto" src="img/contento.png" id="foto2"/></p>
+      <p><img class="foto2" src="img/contento.png" id="foto2"/></p>
     </div>
    <div>
     <p>
@@ -25,10 +25,10 @@
       />
       <input
         type="button"
-        value="Inicio Empate"
+        value="Correr Empate"
         name="empate"
         id="empate"
-        onclick="empate()"
+        onclick="inicio()"
       />
       <input
         type="button"
@@ -37,7 +37,8 @@
         id="gana"
         onclick
       />
-      <input type="button" value="STOP" name="stop" id="stop" onclick="" />
+      <input type="button" value="STOP" name="stop" id="stop" onclick="stop()" />
     </p>
   </body>
+  <script type="text/javascript" src="index.js"></script>
 </html>
