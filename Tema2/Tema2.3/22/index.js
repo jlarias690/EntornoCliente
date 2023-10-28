@@ -17,12 +17,10 @@ document.write.name(fname);
 //}
 
 function mostrar() {
-<<<<<<< HEAD
   datos = formulario.datos.value;
 
   window.opener.document.write = datos;
   window.close();
-=======
   fname = formulario.nombre.value;
   sname = formulario.sname.value;
   // Todo los valores que traemos con el punto value nos trae los valores como string se tendria que combertir al valor correspondiente.
@@ -47,5 +45,4 @@ function mostrar() {
     window.opener.document.formulario.name("p");
     window.close;
   }
->>>>>>> origin/main
 }
