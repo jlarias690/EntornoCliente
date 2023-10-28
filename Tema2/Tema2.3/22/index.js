@@ -17,8 +17,35 @@ document.write.name(fname);
 //}
 
 function mostrar() {
+<<<<<<< HEAD
   datos = formulario.datos.value;
 
   window.opener.document.write = datos;
   window.close();
+=======
+  fname = formulario.nombre.value;
+  sname = formulario.sname.value;
+  // Todo los valores que traemos con el punto value nos trae los valores como string se tendria que combertir al valor correspondiente.
+  fecha = new Date(formulario.fecha.value);
+
+  cad += "Nombre: " + fname.toLocaleDateString() + "<br>";
+  cad += "Primer Apellido: " + sname + "<br>";
+  cad += "Fecha: " + sname + "<br>";
+  var fechaActual = new Date();
+  var anyo = parseInt(fecha.getFullYear());
+  var cont = 0;
+  cad += "Años bisiestos desde" + fecha.toLocaleDateString() + "<br>";
+
+  for (i = anyo; i < fechaActual.getFullYear(); i++) {
+    if ((i % 100 != 0 && i % 4 == 0) || i % 400 == 0) {
+      cad += i + "<br>";
+      cont++;
+    }
+  }
+  if (cont == 0) {
+    cad += "No hay año bisiestos desde" + fecha.toLocaleDateString();
+    window.opener.document.formulario.name("p");
+    window.close;
+  }
+>>>>>>> origin/main
 }
