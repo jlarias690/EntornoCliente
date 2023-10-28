@@ -11,7 +11,14 @@ function abrirVentana() {
     "toolbar=no,location=no,menubar=no,width=1000,height=1000,resizable= yes,scrollbars= yes,top= 300,left = 300"
   );
 }
+//function mostrar() {
+window.location.href = "index.html";
+document.write.name(fname);
+//}
+
 function mostrar() {
-  window.location.href = "index.html";
-  document.write.name(fname);
+  datos = formulario.datos.value;
+
+  window.opener.document.write = datos;
+  window.close();
 }
