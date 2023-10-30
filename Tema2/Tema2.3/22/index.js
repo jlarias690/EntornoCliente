@@ -11,7 +11,16 @@ function abrirVentana() {
     "toolbar=no,location=no,menubar=no,width=1000,height=1000,resizable= yes,scrollbars= yes,top= 300,left = 300"
   );
 }
+//function mostrar() {
+window.location.href = "index.html";
+document.write.name(fname);
+//}
+
 function mostrar() {
+  datos = formulario.datos.value;
+
+  window.opener.document.write = datos;
+  window.close();
   fname = formulario.nombre.value;
   sname = formulario.sname.value;
   // Todo los valores que traemos con el punto value nos trae los valores como string se tendria que combertir al valor correspondiente.
