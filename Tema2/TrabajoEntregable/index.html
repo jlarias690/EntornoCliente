@@ -8,36 +8,36 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div >
+    <div  class="contenedor">
       <p><img class="foto1" src="img/contento.png" id="foto1"/></p>
       <br>
       <br>
       <p><img class="foto2" src="img/contento.png" id="foto2"/></p>
     </div>
    <div>
-    <p>
-      <input
+    <p class="boton">
+      <input class="comenzar"
         type="button"
-        value="Reinicio"
+        value="Comenzar"
         name="Reinicio"
         id="reinicio"
-        onclick=""
+        onclick="reinicio()"
       />
-      <input
+      <input class="empate"
         type="button"
-        value="Correr Empate"
+        value="Empate"
         name="empate"
         id="empate"
         onclick="inicio()"
       />
-      <input
+      <input class="correr"
         type="button"
-        value="Gana el Segundo"
+        value="A Correr"
         name="gana"
         id="gana"
-        onclick
+        onclick = "inicio2()"
       />
-      <input type="button" value="STOP" name="stop" id="stop" onclick="stop()" />
+      <input class="stop" type="button" value="STOP" name="stop" id="stop" onclick="stop()" />
     </p>
   </body>
   <script type="text/javascript" src="index.js"></script>
