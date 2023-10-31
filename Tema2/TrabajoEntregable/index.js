@@ -15,7 +15,7 @@ let correr = () => {
   if (posicion1 >= 90) {
     posicion1 = 0;
   }
-  document.getElementById("empate").disabled = true;
+  //document.getElementById("empate").disabled = true; // Belen
   document.getElementById("gana").disabled = true;
 };
 //correrGanaEl2()-> La segunda figura gana.
@@ -35,7 +35,7 @@ let correrGanaEl2 = () => {
     posicion2 = 0;
   }
   document.getElementById("empate").disabled = true;
-  document.getElementById("gana").disabled = true;
+  //document.getElementById("gana").disabled = true;//Belen
 };
 // reinicio()-> Reiniciamos las posiciones a 0.
 let reinicio = () => {
@@ -57,3 +57,7 @@ let inicio2 = () => {
 let stop = () => {
   clearInterval($tem);
 };
+/*Muy bien Jose Luis, para que puedas parar y continuar la carrera sin comenzar desde 
+principio, el botón empate solo deshabilita el de ganar, y el de ganar solo deshabilita
+el de empatar. 
+*/
