@@ -10,8 +10,8 @@ $error = [];
 let validar = () => {
   cadenaNom = $inputNom.value.toUpperCase();
   cadenaApe = $inputApe.value.toUpperCase();
-  alert(cadenaNom);
-  alert(cadenaApe);
+  var nom = false;
+  var ape = false;
   if (
     cadenaNom.startsWith("A") ||
     cadenaNom.startsWith("E") ||
@@ -19,15 +19,19 @@ let validar = () => {
     cadenaNom.startsWith("O") ||
     cadenaNom.startsWith("U")
   ) {
-    alert("0");
-    $error.push("El nombre no empieza por una vocal.");
+    var nom = true;
+    $error.push("El nombre no puede empezar por una vocal.");
   }
 
   if (cadenaApe.split(" ").length >= 3) {
-    alert("1");
+    var ape = true;
     $error.push("El apellido no puede tener mas de dos palabras");
   }
-  if ($error.length) {
+
+  if (nom == true && ape == true) {
+    abrirCeu();
+  }
+  if ($error.length > 0) {
     //emprimimos el array en los div a traves de los id que tienen.
     document.getElementById("nom").innerHTML = $error[0];
     document.getElementById("nom").style.color = "red";
@@ -35,5 +39,8 @@ let validar = () => {
     document.getElementById("ape").style.color = "red";
   }
 };
+function abrirCeu() {
+  let nuevaVentana = (window.location.href = "https://ceu.es.");
+}
 
 window.addEventListener("DOMContentLoaded", inicio);
