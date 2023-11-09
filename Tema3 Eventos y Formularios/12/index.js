@@ -21,12 +21,11 @@ let validar = () => {
   ) {
     var nom = true;
     $error.push("El nombre no puede empezar por una vocal.");
-  }
-
-  if (cadenaApe.split(" ").length >= 3) {
-    var ape = true;
-    $error.push("El apellido no puede tener mas de dos palabras");
-  }
+  } else if (cadenaNom.empy)
+    if (cadenaApe.split(" ").length >= 3) {
+      var ape = true;
+      $error.push("El apellido no puede tener mas de dos palabras");
+    }
 
   if (nom == true && ape == true) {
     abrirCeu();
