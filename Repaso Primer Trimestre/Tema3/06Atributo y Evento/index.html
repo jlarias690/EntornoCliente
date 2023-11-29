@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+
+  <body>
+    <form name="nameform1" id="idform1" action="#">
+      Cuadro de texto <br />
+      <input
+        type="text"
+        name="nametexto"
+        id="idtexto"
+        value="hola"
+        size="50"
+        maxlength="50"
+      />
+      <br /><br />
+      textarea <br />
+      <textarea name="nameparrafo" id="idparrafo" cols="50" rows="5">
+        HOla</textarea
+      ><br /><br />
+      Radiobutton <br />
+      <input type="radio" value="si" name="namepregunta" /> SI
+      <input type="radio" value="no" name="namepregunta" /> NO
+      <input type="radio" value="nsnc" name="namepregunta" /> NS/NC <br /><br />
+      Checkbox <br />
+      <input
+        type="checkbox"
+        value="condiciones"
+        name="contrato"
+        id="idcondiciones"
+      />
+      He leído y acepto las condiciones
+      <input
+        type="checkbox"
+        value="privacidad"
+        name="contrato"
+        id="idprivacidad"
+      />
+      He leído la política de privacidad
+      <br /><br />
+      Select <br />
+      <select id="idopciones" name="nameopciones">
+        <option value="1">Primer valor</option>
+        <option value="2">Segundo valor</option>
+        <option value="3">Tercer valor</option>
+        <option value="4">Cuarto valor</option></select
+      ><br /><br />
+      <!--En un formulario  el boton enviar deberia ser de type ="submit" lo cambio a type="button"para poder ver los resultado en el div con id="resultado" -->
+      <input type="button" name="Submit" value="Pulsame" id="b1" />
+    </form>
+    <br /><br />
+    <div id="resultado"></div>
+  </body>
+</html>
