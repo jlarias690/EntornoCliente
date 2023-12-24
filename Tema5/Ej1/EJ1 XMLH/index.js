@@ -7,9 +7,10 @@ cargarUsuario = () => {
 
   // Configurar la función de devolución de llamada cuando la solicitud se complete
   xhr.addEventListener("readystatechange", (e) => {
-    if (xhr.readyState !== 4) return;
+    if (xhr.readyState !== 4) return; //Es obligatorio
 
     if (xhr.status >= 200 && xhr.status < 300) {
+      //Es obligatorio
       // La solicitud fue exitosa
 
       let usuario = JSON.parse(xhr.responseText);

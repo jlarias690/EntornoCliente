@@ -1,55 +1,61 @@
-cargarUsuario = () => {
-  // Crear una instancia de XMLHttpRequest
+inicio = () => {
+  document
+    .getElementById("llamada")
+    .addEventListener("click", "resultadoTabla");
+};
+
+resultadoTabla = (e) => {
+  e.preventDefault();
   var xhr = new XMLHttpRequest();
-
-  // Configurar la solicitud
-  xhr.open("GET", "https://jsonplaceholder.typicode.com/users/5", true);
-
-  // Configurar la función de devolución de llamada cuando la solicitud se complete
+  xhr.open("GET", ": jsonplaceholder.typicode.com/posts", true);
   xhr.addEventListener("readystatechange", (e) => {
+    e.preventDefault();
     if (xhr.readyState !== 4) return;
-
     if (xhr.status >= 200 && xhr.status < 300) {
-      // La solicitud fue exitosa
-
-      let usuario = JSON.parse(xhr.responseText);
-      mostrarInfoUsuario(usuario);
+      let json = JSON.parse(xhr.responseText);
+      let tabla = document.createElement("table");
+      tabla.style.border = "2px red solid";
+      tabla.style.textAlign = "center";
+      let titulo = document.createElement("thead");
+      let columnaTitulo = document.createElement("th");
+      columnaTitulo.style.border = "2px black solid";
+      columnaTitulo.innerHTML = "Título";
+      let columnaCuerpo = document.createElement("th");
+      columnaCuerpo.innerHTML = "Cuerpo";
+      columnaCuerpo.style.border = "2px black solid";
     } else {
-      // Hubo un error en la solicitud
-      document.getElementById("divUsuario").innerHTML =
-        "Error al cargar el usuario";
+      document.getElementById("divjson").innerHTML = "Error al cargar el json";
     }
   });
-
   // Configurar la función de devolución de llamada para manejar errores de red
   xhr.onerror = function () {
-    document.getElementById("divUsuario").innerHTML = "Error de red";
+    document.getElementById("divjson").innerHTML = "Error de red";
   };
 
   // Enviar la solicitud
   xhr.send();
 };
-mostrarInfoUsuario = (usuario) => {
-  var usuarioInfoDiv = document.getElementById("divUsuario");
+mostrarInfojson = (json) => {
+  var jsonInfoDiv = document.getElementById("divjson");
 
-  // Mostrar los datos del usuario en la página HTML
-  usuarioInfoDiv.innerHTML =
+  // Mostrar los datos del json en la página HTML
+  jsonInfoDiv.innerHTML =
     "<h2>Nombre: " +
-    usuario.name +
+    json.name +
     "</h2>" +
-    "<p>Usuario: " +
-    usuario.username +
+    "<p>json: " +
+    json.username +
     "</p>" +
     "<p>Correo: " +
-    usuario.email +
+    json.email +
     "</p>" +
     "<p>Dirección: " +
-    usuario.address.street +
+    json.address.street +
     ", " +
-    usuario.address.suite +
+    json.address.suite +
     ", " +
-    usuario.address.city +
+    json.address.city +
     "</p>";
 };
 
-window.addEventListener("DOMContentLoaded", cargarUsuario);
+window.addEventListener("DOMContentLoaded", cargarjson);
