@@ -1,8 +1,3 @@
-/*- Crear una página html con un <H1> POSTS </H1> y un botón. 
-Cuando pulsemos un botón vamos a llamar a la
-api: jsonplaceholder.typicode.com/posts , y vamos 
-a pintar el resultado en una tabla. Sacar en cada fila el title y el
-body, cada uno en una columna diferente.*/
 let inicio = () => {
   //en la función inicio sólo debería ir el evento, el resto en otra función.
   var boton = document.getElementById("b1");
@@ -14,22 +9,6 @@ let inicio = () => {
       if (xhr.readyState !== 4) return;
       if (xhr.status >= 200 && xhr.status < 300) {
         console.log("éxito");
-
-        let json = JSON.parse(xhr.responseText);
-        let tabla = document.createElement("table");
-        tabla.style.border = "2px black solid";
-        tabla.style.textAlign = "center";
-        let titulo = document.createElement("thead");
-        let columnaTitulo = document.createElement("th");
-        columnaTitulo.style.border = "2px black solid";
-        columnaTitulo.innerHTML = "Título";
-        let columnaCuerpo = document.createElement("th");
-        columnaCuerpo.innerHTML = "Cuerpo";
-        columnaCuerpo.style.border = "2px black solid";
-        titulo.appendChild(columnaTitulo);
-        titulo.appendChild(columnaCuerpo);
-        tabla.appendChild(titulo);
-        let cuerpo = document.createElement("tbody");
 
         json.forEach((el) => {
           let fila = document.createElement("tr");
