@@ -1,0 +1,16 @@
+<!--Metodo tradicional-->
+<div class="comp-user">
+  <p class="name">Jose Luis Arias Parrado</p>
+  <p class="role">(Administrador de Sistemas)</p>
+</div>
+<!--Interpolacion. Trae los datos de archivo TS se usan dos llaves para acceder a las variables-->
+<h1>{{ titulo }}</h1>
+
+<div class="comp-user">
+  <!--Interpolacion. Trae los datos de archivo TS-->
+  <p class="name">{{ name }}</p>
+  <p class="role">{{ role }}</p>
+</div>
+<!--Con esta forma se consigue modificar los atributos se tiene que poner el nombre de la variable que hemos indicado en el componente.-->
+<h1 [innerHTML]="titulo"></h1>
+<input type="text" [value]="name" />

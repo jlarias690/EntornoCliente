@@ -3,3 +3,22 @@
 <p>¡¡¡¡Hola!!! Soy Jose Luis</p>
 
 {{ title }}
+
+<h3>{{ name }}</h3>
+
+<p>{{ getEdad() >= 18 ? "Es mayour de edad" : "Es menor de edad" }}</p>
+
+<app-user-profile></app-user-profile>
+<p [innerHTML]="name"></p>
+<img [src]="imgURL" alt="" />
+<p [class]="clase">{{ name }}</p>
+
+checkbox:<input type="checkbox" [checked]="marcado" />
+<br />
+<input type="text" [value]="name" [disabled]="deshabilitado" />
+<br /><br />
+Datos de la asignatura.
+<div>nombre:{{ asignatura.nombre }}</div>
+<div>codigo:{{ asignatura.codigo }}</div>
+
+<app-alumno></app-alumno>

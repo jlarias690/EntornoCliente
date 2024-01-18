@@ -1,0 +1,9 @@
+<h1>{{ titulo }}</h1>
+<p>{{ nombre }}</p>
+<p>{{ apellido }}</p>
+<p>{{ edad }}</p>
+<p>{{ dni }}</p>
+<p>{{ multi >= 18 ? "Es mayour de edad" : "Es menor de edad" }}</p>
+
+Introducir DNI: <input type="text" #nuevoDNI (keyup)="(0)" />
+<div>DNI: {{ nuevoDNI.value }}</div>
