@@ -22,3 +22,40 @@ Datos de la asignatura.
 <div>codigo:{{ asignatura.codigo }}</div>
 
 <app-alumno></app-alumno>
+<br />
+<button (click)="nombreCompanero()">Pulsa</button>
+
+<input type="text" value="{{ companero }}" />
+
+<br />
+<input type="text" (keyup)="mostrar($event)" />
+
+<p>{{ key }}</p>
+<br />
+
+¿Marcado?
+<input type="checkbox" (change)="mostrarMarcado($event)" />
+<p>{{ fraseCheck }}</p>
+<br /><br />
+Two Binding
+<input type="text" [(ngModel)]="name" />
+<p>El nombre es: {{ name }}</p>
+
+<br />
+<input type="text" [(ngModel)]="texto1" (keyup)="cambiarM($event)" />
+<input type="text" [(ngModel)]="texto2" (keyup)="cambniarm($event)" />
+
+<br />
+<table>
+  <tr>
+    <input
+      type="checkbox"
+      [(ngModel)]="cambioColor"
+      (change)="cambioColorFun($event)"
+    />
+  </tr>
+  <tr>
+    <div class="fondo">Hola</div>
+  </tr>
+</table>
+<app-datos-libro></app-datos-libro>

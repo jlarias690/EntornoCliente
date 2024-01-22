@@ -14,4 +14,17 @@ export class AlumnoComponent {
   edad: number = 21;
   dni: string = '45809095A';
   multi: number = this.edad * 5;
+  check2Marcardo: boolean = false;
+  mostrarMensaje() {
+    alert('He marcadado el checkbox');
+    this.texto = 'Check pulsado';
+  }
+  texto: string = 'Antes de pulsar';
+  marcado(event: any) {
+    if (event.target.value == 'H') {
+      this.texto = 'Pusado Hombre';
+    } else {
+      this.texto = 'Pulsado Mujer';
+    }
+  }
 }

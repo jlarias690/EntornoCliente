@@ -7,3 +7,16 @@
 
 Introducir DNI: <input type="text" #nuevoDNI (keyup)="(0)" />
 <div>DNI: {{ nuevoDNI.value }}</div>
+
+Menor:
+<input type="checkbox" [checked]="edad <= 18" />
+<br />
+Pulsar:
+<input type="checkbox" [checked]="check2Marcardo" (click)="mostrarMensaje()" />
+{{ texto }}
+<br /><br />
+<label for="radi">H</label>
+<input type="radio" name="radi" (click)="marcado($event)" value="H" />
+
+<label for="radi">M</label>
+<input type="radio" name="radi" (click)="marcado($event)" value="M" />
