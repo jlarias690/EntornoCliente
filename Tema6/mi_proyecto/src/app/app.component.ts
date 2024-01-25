@@ -64,4 +64,10 @@ export class AppComponent {
   cambioColorFun(event: any) {
     this.cambioColor = event.target.value;
   }
+
+  numLibro: string = '';
+  tituloLibro = '';
+  mostrarTitulo(titulo: string) {
+    this.tituloLibro = titulo;
+  }
 }

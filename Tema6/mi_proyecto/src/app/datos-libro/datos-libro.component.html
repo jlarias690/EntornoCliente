@@ -1,6 +1,6 @@
 <p>DATOS DEL LIBRO</p>
 
-<ul>
+<ul style="background-color: aqua">
   <li>Titulo:{{ libro.titulo }}</li>
   <li>Autor:{{ libro.autor }}</li>
   <li>Precio:{{ libro.precio }}</li>
@@ -14,3 +14,6 @@
 <p>Cantidad:{{ libro.cantidad }}</p>
 
 <input type="text" [(ngModel)]="libro.cantidad" />
+<p>Datos que pasamos desde el padre:{{ numLibro }}</p>
+
+<button (click)="devolverTitulo()">Quiero el libro{{ numLibro }}</button>

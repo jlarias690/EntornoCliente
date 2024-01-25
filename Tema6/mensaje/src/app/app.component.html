@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+<h2>Componente Padre</h2>
+
+Mensaje:
+<textarea [(ngModel)]="mensajePadre" rows="3"></textarea>
+
+respuesta del hijo: {{ respuestaHijo }}
+
+<app-mensaje-hijo
+  [mensajeHijo]="mensajePadre"
+  (selected)="mostrarRespuesta($event)"
+></app-mensaje-hijo>

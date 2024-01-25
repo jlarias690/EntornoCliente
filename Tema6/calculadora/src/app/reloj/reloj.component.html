@@ -1,0 +1,13 @@
+<label for="operador1">Operador 1</label>
+<input type="text" name="operador1" id="" [(ngModel)]="valor1" />
+<br />
+<label for="operador2">Operador 2</label>
+<input type="text" name="operador2" id="" [(ngModel)]="valor2" />
+<br />
+
+<button (click)="sumar()">Sumar</button>
+<button (click)="restar()">Restar</button>
+<button (click)="multiplicar()">Multiplicar</button>
+<button (click)="dividir()">Dividir</button>
+
+<p>El resultado de la operacion seria:{{ total }}</p>

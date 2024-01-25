@@ -1,0 +1,26 @@
+<h1>{{ title }}</h1>
+<form action="">
+  <label for="nom">Nombre usuario:</label>
+  <input type="text" [(ngModel)]="nombre" name="nombre" />
+  <br />
+  <label for="apel">Apellidos del usuario:</label>
+  <input type="text" [(ngModel)]="apellidos" name="apellidos" />
+
+  <button (click)="registrar()">Alta</button>
+  <br />
+
+  <p *ngIf="alta; else sinAlta">{{ mensaje }}</p>
+  <ng-template #sinAlta>
+    <p>Ninguna Alta</p>
+  </ng-template>
+</form>
+
+<h1>Listado de personas</h1>
+<ul>
+  <li *ngFor="let p of personas; let i = index">
+    <p>{{ i + 1 }}</p>
+    <p>Nombre:{{ p.nombre }}</p>
+    <p>Apellidos:{{ p.apellidos }}</p>
+    <p>Edad:{{ p.edad }}</p>
+  </li>
+</ul>

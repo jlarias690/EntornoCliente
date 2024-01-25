@@ -1,3 +1,5 @@
+<app-alumno></app-alumno>
+<app-datos-libro></app-datos-libro>
 <h1 style="color: red; font-weight: bold">Mi primera aplicacion Angular</h1>
 <h1 class="azul">Mi primera aplicacion Angular</h1>
 <p>¡¡¡¡Hola!!! Soy Jose Luis</p>
@@ -21,7 +23,6 @@ Datos de la asignatura.
 <div>nombre:{{ asignatura.nombre }}</div>
 <div>codigo:{{ asignatura.codigo }}</div>
 
-<app-alumno></app-alumno>
 <br />
 <button (click)="nombreCompanero()">Pulsa</button>
 
@@ -58,4 +59,16 @@ Two Binding
     <div class="fondo">Hola</div>
   </tr>
 </table>
-<app-datos-libro></app-datos-libro>
+<br />
+<br />
+<h1>Paso de parametros en componente libro</h1>
+
+<input type="text" [(ngModel)]="numLibro" />
+
+<div style="background-color: orange">
+  <app-datos-libro
+    [numLibro]="numLibro"
+    (selected)="mostrarTitulo($event)"
+  ></app-datos-libro>
+  Título del libro {{ tituloLibro }}
+</div>
