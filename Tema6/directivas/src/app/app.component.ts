@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ArticuloComponent } from './articulo/articulo.component';
 
 export interface Persona {
   nombre: string;
@@ -12,7 +13,7 @@ export interface Persona {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule],
+  imports: [CommonModule, RouterOutlet, FormsModule, ArticuloComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

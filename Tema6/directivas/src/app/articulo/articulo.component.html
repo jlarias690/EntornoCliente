@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <h1>{{ titulo }}</h1>
+      <div class="contenedor">
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            [(ngModel)]="inputNombre"
+            name="nombre"
+            id="nombre"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="precio">Precio:</label>
+          <input type="number" [(ngModel)]="inputPrecio" name="precio" id="" />
+        </div>
+        <br />
+        <div>
+          <label for="unidades">Unidades:</label>
+          <input
+            type="number"
+            [(ngModel)]="inputUnidades"
+            name="unidades"
+            id=""
+          />
+        </div>
+      </div>
+      <div class="boton">
+        <button class="b1" (click)="comprar()">Comprar</button>
+      </div>
+    </form>
+    <!--
+    <div class="printLista">
+      <div *ngFor="let item of articulos; let i = index">
+        {{ item.nombre }} - {{ item.precio }} - {{ item.unidades }}
+      </div>
+    </div>-->
+
+    <app-listado-articulos
+      *ngFor="let item of articulos; let i = index"
+      [articuloIndividual]="item"
+      [indice]="i"
+    ></app-listado-articulos>
+  </body>
+</html>

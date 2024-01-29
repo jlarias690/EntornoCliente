@@ -1,0 +1,13 @@
+<div class="printLista">
+  <div>
+    {{ indice + 1 }}-{{ articuloIndividual.nombre }} -
+    {{ articuloIndividual.precio }} -
+    {{ articuloIndividual.unidades }}
+  </div>
+</div>
+<app-caracteristicas-articulo
+  (selected)="agregarCaracteristicas($event)"
+></app-caracteristicas-articulo>
+<ul>
+  <li *ngFor="let caract of arrayCaracteristica">{{ caract }}</li>
+</ul>

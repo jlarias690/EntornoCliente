@@ -1,0 +1,14 @@
+.contenedor {
+  display: flex;
+  justify-content: space-evenly;
+}
+h1 {
+  text-align: center;
+}
+.boton {
+  text-align: center;
+  margin: 3%;
+}
+.printLista {
+  background-color: aquamarine;
+}
