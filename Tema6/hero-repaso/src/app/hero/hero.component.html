@@ -1,0 +1,9 @@
+<h1 class="titulo">HERO</h1>
+<p>Nombres:{{ nombre }}</p>
+<p>Edad:{{ edad }}</p>
+<p>Nombre en mayuscula: {{ nombre | uppercase }}</p>
+<p>Concatenación: {{ nombre + " " + edad }}</p>
+<button (click)="edadDefecto()">Cambiar Edad a 18</button>
+<button *ngIf="nombre === 'Ironman'" (click)="cambiarNombre()">
+  Cambiar Nombres
+</button>
