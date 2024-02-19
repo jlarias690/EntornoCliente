@@ -1,0 +1,9 @@
+<p>serie works!</p>
+
+<div *ngIf="data | async as alias">
+  <p>{{ alias.image.original }}</p>
+  <p>{{ alias.name }}</p>
+  <p>{{ alias.language }}</p>
+  <p>{{ alias.genres }}</p>
+  <p>{{ alias.summary }}</p>
+</div>

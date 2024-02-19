@@ -1,0 +1,19 @@
+<div *ngFor="let alias of (datosObservable | async)?.results">
+  <p>{{ alias.name.first }}</p>
+  <p>{{ alias.name.last }}</p>
+  <p>{{ alias.email }}</p>
+  <p>{{ alias.location.city }}</p>
+  <img src="{{ alias.picture.medium }}" />
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<div *ngFor="let alias of (datosObservable2 | async)?.results">
+  <p>{{ alias.name.first }}</p>
+  <p>{{ alias.name.last }}</p>
+  <p>{{ alias.email }}</p>
+  <p>{{ alias.location.city }}</p>
+  <img src="{{ alias.picture.medium }}" />
+</div>

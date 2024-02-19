@@ -10,6 +10,10 @@
 <button class="btn" (click)="mostrarDatos()">Enviar</button>
 <div *ngIf="botonOk">
   <div>
+    <!--Los parametros entre [] son las variables que tienen que estar cargado en el componente 
+      hijo para transmitir los parametros de PADREA A HIJO-->
+    <!--El parametro entre () son los parametros que se pasan de Componente HIJO A PADRE  el 
+      $event es el parametro que enviamos desde el componente hijo-->
     <app-resumen
       [seriePadre]="serieHijo"
       [correoPadre]="correoHijo"

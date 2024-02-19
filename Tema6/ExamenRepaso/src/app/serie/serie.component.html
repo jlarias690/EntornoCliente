@@ -6,7 +6,7 @@
       <td><strong>Idioma:</strong> {{ serie.language }}</td>
       <ul>
         <strong> Géneros:</strong>
-        <li>{{ serie.genres }}</li>
+        <li *ngFor="let genres of serie.genres">{{ genres }}</li>
       </ul>
       <td><strong>Resumen:</strong> {{ serie.summary }}</td>
     </div>
