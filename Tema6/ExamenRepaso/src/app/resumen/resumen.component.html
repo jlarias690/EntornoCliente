@@ -1,0 +1,19 @@
+<div style="text-align: center">
+  <h1>Resumen de la solicitud</h1>
+  <p>Nombre: {{ nombrePadre }}</p>
+  <p>Correo: {{ correoPadre }}</p>
+  <p>Serie: {{ seriePadre }}</p>
+  <label for="">Valoracion</label>
+  <input type="text" [(ngModel)]="valoracion" style="border: 1px solid" /><br />
+  <button
+    style="padding: 3px; background-color: aqua; border-radius: 5px"
+    (click)="enviarValoracion()"
+  >
+    Enviar Valoracion
+  </button>
+  <br />
+  <br />
+  <div *ngIf="mensaje">
+    <p>Por favor, introuduce la valoracion.</p>
+  </div>
+</div>

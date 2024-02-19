@@ -1,0 +1,30 @@
+<h1 style="text-align: center">FORMULARIO VALORACIÓN</h1>
+<div class="cont1">
+  <label for="serie">Serie</label>
+  <input type="text" [(ngModel)]="serieHijo" />
+  <label for="correo">Correo</label>
+  <input type="text" [(ngModel)]="correoHijo" />
+  <label for="nombre">Nombre</label>
+  <input type="text" [(ngModel)]="nombreHijo" />
+</div>
+<button class="btn" (click)="mostrarDatos()">Enviar</button>
+<div *ngIf="botonOk">
+  <div>
+    <app-resumen
+      [seriePadre]="serieHijo"
+      [correoPadre]="correoHijo"
+      [nombrePadre]="nombreHijo"
+      (selected)="mostrarRespuesta($event)"
+    >
+    </app-resumen>
+  </div>
+</div>
+<div *ngIf="mostrar">
+  <h1 style="color: green">
+    Valoracion: Gracias {{ nombreHijo }} por su valoración:
+    {{ valoracionRecibida }}
+  </h1>
+</div>
+<div *ngIf="mensajeError">
+  <p [ngClass]="rojo">Por favor, introuduce el correo.</p>
+</div>

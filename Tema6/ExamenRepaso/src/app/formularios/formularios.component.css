@@ -1,0 +1,19 @@
+.cont1 > input {
+  border: solid 1px;
+}
+.cont1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+button.btn {
+  background-color: #9191e3;
+  padding: 0.5%;
+  border-radius: 6px;
+  margin-left: 5%;
+}
+.rojo {
+  color: red;
+}
