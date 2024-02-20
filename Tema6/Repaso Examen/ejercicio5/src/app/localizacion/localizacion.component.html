@@ -1,0 +1,6 @@
+<div *ngFor="let alias of (localizacion | async)?.results">
+  <p>{{ alias.id }}</p>
+  <p>{{ alias.name }}</p>
+  <p>{{ alias.type }}</p>
+  <p>{{ alias.dimension }}</p>
+</div>

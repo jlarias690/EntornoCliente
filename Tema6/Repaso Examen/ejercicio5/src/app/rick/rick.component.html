@@ -1,0 +1,18 @@
+<h1>{{ title }}</h1>
+
+<button
+  (click)="mostrarPersonajes()"
+  style="background-color: aqua; padding: 5px; margin-top: 1%"
+>
+  MOSTRAR
+</button>
+<div *ngIf="mostrar">
+  <div *ngFor="let alias of (personajes | async)?.results">
+    <img src="{{ alias.image }}" alt="" />
+    <p>{{ alias.id }}</p>
+    <p>{{ alias.name }}</p>
+    <p>{{ alias.status }}</p>
+    <p>{{ alias.species }}</p>
+    <p>{{ alias.episode.length }}</p>
+  </div>
+</div>

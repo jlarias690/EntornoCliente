@@ -1,0 +1,21 @@
+<div *ngIf="datosHeroes | async as alias">
+  <h1>{{ alias.squadName }}</h1>
+  <p>Cidudad y año de formación: {{ alias.homeTown }}, {{ alias.formed }}</p>
+  <div *ngFor="let heroe of alias.members">
+    <ul>
+      <li>
+        <h2>{{ heroe.name }}</h2>
+        <p>{{ heroe.secretIdentity }}</p>
+        <p>{{ heroe.age }}</p>
+        <p>{{ title }}</p>
+        <div *ngFor="let poderes of heroe.powers">
+          <ul>
+            <li>
+              <p>{{ poderes }}</p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
