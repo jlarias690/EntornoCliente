@@ -1,0 +1,35 @@
+<button (click)="mostrarReceta()">Obtener Receta</button>
+
+<div *ngIf="boton">
+  <div *ngFor="let alias of (datosReceta | async)?.meals">
+    <p>{{ alias.strMeal }}</p>
+    <img src="{{ alias.strMealThumb }}" alt="" />
+    <p>{{ alias.strSource }}</p>
+    <ol>
+      <li *ngIf="alias.strIngredient1">{{ alias.strIngredient1 }}</li>
+      <li *ngIf="alias.strIngredient2">{{ alias.strIngredient2 }}</li>
+      <li *ngIf="alias.strIngredient3">{{ alias.strIngredient3 }}</li>
+      <li *ngIf="alias.strIngredient4">{{ alias.strIngredient4 }}</li>
+      <li *ngIf="alias.strIngredient5">{{ alias.strIngredient5 }}</li>
+      <li *ngIf="alias.strIngredient6">{{ alias.strIngredient6 }}</li>
+      <li *ngIf="alias.strIngredient7">{{ alias.strIngredient7 }}</li>
+      <li *ngIf="alias.strIngredient8">{{ alias.strIngredient8 }}</li>
+      <li *ngIf="alias.strIngredient9">{{ alias.strIngredient9 }}</li>
+      <li *ngIf="alias.strIngredient10">{{ alias.strIngredient10 }}</li>
+      <li *ngIf="alias.strIngredient11">{{ alias.strIngredient11 }}</li>
+      <li *ngIf="alias.strIngredient12">{{ alias.strIngredient12 }}</li>
+      <li *ngIf="alias.strIngredient13">{{ alias.strIngredient13 }}</li>
+      <li *ngIf="alias.strIngredient14">{{ alias.strIngredient14 }}</li>
+      <li *ngIf="alias.strIngredient15">{{ alias.strIngredient15 }}</li>
+      <li *ngIf="alias.strIngredient16">{{ alias.strIngredient16 }}</li>
+      <li *ngIf="alias.strIngredient17">{{ alias.strIngredient17 }}</li>
+      <li *ngIf="alias.strIngredient18">{{ alias.strIngredient18 }}</li>
+      <li *ngIf="alias.strIngredient19">{{ alias.strIngredient19 }}</li>
+      <li *ngIf="alias.strIngredient20">{{ alias.strIngredient20 }}</li>
+    </ol>
+    <button (click)="mostrarInstrucciones()">Ver Instrucciones</button>
+    <div *ngIf="boton2">
+      <p>{{ alias.strInstructions }}</p>
+    </div>
+  </div>
+</div>

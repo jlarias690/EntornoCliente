@@ -1,0 +1,24 @@
+<div *ngFor="let alias of (gatitos | async)?.data">
+  <ul *ngIf="alias.pattern == 'All'" style="color: red">
+    <li>{{ alias.breed }}</li>
+    <li>{{ alias.coat }}</li>
+    <li>{{ alias.country }}</li>
+    <li>{{ alias.origin }}</li>
+    <li>
+      {{ alias.pattern }}
+    </li>
+    <br />
+    <br />
+  </ul>
+  <ul *ngIf="alias.pattern != 'All'" style="color: green">
+    <li>{{ alias.breed }}</li>
+    <li>{{ alias.coat }}</li>
+    <li>{{ alias.country }}</li>
+    <li>{{ alias.origin }}</li>
+    <li>
+      {{ alias.pattern }}
+    </li>
+    <br />
+    <br />
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <label for="">Introduce una longitud</label>
+  <input
+    style="border: solid 1px black; border-radius: 5px"
+    type="number"
+    [(ngModel)]="num"
+  />
+  <button style="background-color: gray" (click)="mostrarFrase()">Frase</button>
+
+  <div *ngIf="frase | async as alias">
+    <p>{{ alias.fact }}</p>
+  </div>
+</div>

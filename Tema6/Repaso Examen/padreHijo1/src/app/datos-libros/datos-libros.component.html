@@ -1,0 +1,21 @@
+<div>
+  <label for="">Titulo</label>
+  <input type="text" [(ngModel)]="tituloDatos" />
+  <label for="">Editorial</label>
+  <input type="text" [(ngModel)]="editorialDatos" />
+  <label for="">Autor</label>
+  <input type="text" [(ngModel)]="autorDatos" />
+  <button (click)="enviarDatos()">Submit</button>
+  <div>
+    <p>{{ valoracionRecibida }}</p>
+  </div>
+</div>
+<div *ngIf="BotonOK">
+  <app-resumen
+    [tituloResumen]="tituloDatos"
+    [editorialResume]="editorialDatos"
+    [autorResumen]="autorDatos"
+    (selected)="enviarValoracion($event)"
+  >
+  </app-resumen>
+</div>

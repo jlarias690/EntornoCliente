@@ -8,6 +8,7 @@ import { Usuario } from '../model/model';
 export class ApiService {
   apiUrl = 'https://jsonplaceholder.typicode.com/users';
   constructor(private http: HttpClient) {}
+
   getUsuario(num: number) {
     return this.http.get<Usuario>(this.apiUrl + '/' + num);
   }
