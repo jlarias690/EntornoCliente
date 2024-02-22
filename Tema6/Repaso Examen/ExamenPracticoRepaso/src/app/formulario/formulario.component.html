@@ -1,0 +1,42 @@
+<h1>Formulario valoracion</h1>
+
+<div>
+  <label for="">Serie</label>
+  <input
+    style="border: solid 1px black"
+    type="text"
+    [(ngModel)]="serieFormulario"
+  />
+  <label for="">Correo</label>
+  <input
+    style="border: solid 1px black"
+    type="text"
+    [(ngModel)]="correoFormulario"
+  />
+  <label for="">Nombre</label>
+  <input
+    style="border: solid 1px black"
+    type="text"
+    [(ngModel)]="nombreFormulario"
+  />
+  <button style="background-color: aqua; padding: 5px" (click)="enviarDatos()">
+    Enviar
+  </button>
+</div>
+
+<div *ngIf="botonOK">
+  <div *ngIf="mostrar">
+    <h1 ngClass="green">
+      Valoracion: Gracias{{ nombreFormulario }} por su valoracion
+      {{ valoracionRecibida }}
+    </h1>
+    <p *ngIf="mensajeError">EL CAMPO CORREO TIENE QUE ESTAR COMPLETO</p>
+  </div>
+  <app-resumen
+    [serieResumen]="serieFormulario"
+    [correoResumen]="correoFormulario"
+    [nombreResumen]="nombreFormulario"
+    (selected)="enviarValoracion($event)"
+  >
+  </app-resumen>
+</div>

@@ -1,0 +1,7 @@
+<h1>Resumen de la solicitud</h1>
+<p>{{ nombreResumen }}</p>
+<p>{{ correoResumen }}</p>
+<p>{{ serieResumen }}</p>
+<label for="">Valoracion</label>
+<input type="text" style="border: solid 1px" [(ngModel)]="valoracionResumen" />
+<button (click)="enviarValoracion()">Submit</button>

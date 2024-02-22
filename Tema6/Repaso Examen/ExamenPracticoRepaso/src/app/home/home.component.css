@@ -1,0 +1,9 @@
+.cont {
+  display: flex;
+  justify-content: center;
+}
+.cont > button {
+  background-color: aqua;
+  margin: 1%;
+  padding: 1%;
+}

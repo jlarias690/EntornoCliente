@@ -1,0 +1,16 @@
+<p>hola</p>
+
+<table *ngIf="observa | async as serie">
+  <tr>
+    <td><img src="{{ serie.image.original }}" /></td>
+    <div>
+      <td class="titulo">{{ serie.name }}</td>
+      <td><strong>Idioma:</strong> {{ serie.language }}</td>
+      <ul>
+        <strong> Géneros:</strong>
+        <li *ngFor="let genres of serie.genres">{{ genres }}</li>
+      </ul>
+      <td><strong>Resumen:</strong> {{ serie.summary }}</td>
+    </div>
+  </tr>
+</table>
