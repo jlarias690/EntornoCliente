@@ -1,0 +1,39 @@
+<div style="text-align: center">
+  <input type="checkbox" [(ngModel)]="checkResumen" />
+  <label for="">¿Te ha gustado la película?</label>
+</div>
+<div style="text-align: center">
+  <button
+    (click)="enviarDatos()"
+    style="background-color: aqua; padding: 5px; border-radius: 5px"
+  >
+    Enviar Like
+  </button>
+</div>
+<div *ngIf="botonOK">
+  <app-like [likeResumen]="checkResumen"> </app-like>
+</div>
+<div *ngIf="error" style="text-align: center; font-size: 2em; color: red">
+  Nada es imposible para la Fuerza.
+
+  <p style="color: black; font-size: 20px">
+    ¿Porque no te ha gustado la pelicula?
+  </p>
+  <textarea
+    [(ngModel)]="textArea"
+    style="border: solid 1px black; align-items: center"
+    name=""
+    id=""
+    cols="30"
+    rows="5"
+  ></textarea>
+  <button
+    (click)="enviarDatosTextArea()"
+    style="font-size: 15px; color: black; background-color: aqua; padding: 5px"
+  >
+    Enviar observacion
+  </button>
+</div>
+<div *ngIf="boton2OK">
+  <app-like [likeTextArea]="textArea"></app-like>
+</div>

@@ -1,0 +1,33 @@
+<button
+  style="padding: 5px; border-radius: 5px; background-color: aqua"
+  (click)="mostrarPeliculas()"
+>
+  Cargar Peliculas
+</button>
+
+<div *ngIf="botonOK">
+  <div *ngIf="obs | async as alias">
+    <h1 style="text-align: center">Numero de peliculas:{{ alias.count }}</h1>
+  </div>
+  <table>
+    <td>Titulo</td>
+    <td>Director</td>
+    <td>Fecha de lanzamiento</td>
+  </table>
+  <table *ngFor="let alias of (obs | async)?.results">
+    <tr>
+      <td>
+        <a href="" [routerLink]="['/resumen', alias.title]">{{
+          alias.title
+        }}</a>
+      </td>
+    </tr>
+    <tr>
+      <td>{{ alias.director }}</td>
+    </tr>
+    <tr>
+      <td>{{ alias.release_date }}</td>
+    </tr>
+  </table>
+  <p>{{ tituloPelicula }}</p>
+</div>
